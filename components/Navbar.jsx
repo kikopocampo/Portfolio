@@ -1,42 +1,61 @@
+import { Box } from "@mui/material";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
 const NavBar = () => {
   return (
-    <div className="fixed w-full h-20 shadow-xl z-[100]">
-      <div className="flex justify-between items-center w-full h-full px-2 2xl:px-16">
-        <Image
-          src="/../public/assets/logo.png"
-          alt="/"
-          width="125"
-          height="50"
-        />
-        <div>
-          <ul className="hidden md:flex">
-            <Link href="/">
-              <li className="ml-10 text-sm uppercase hiver:border-b">Home</li>
-            </Link>
-            <Link href="/">
-              <li className="ml-10 text-sm uppercase hiver:border-b">About</li>
-            </Link>
-            <Link href="/">
-              <li className="ml-10 text-sm uppercase hiver:border-b">Skills</li>
-            </Link>
-            <Link href="/">
-              <li className="ml-10 text-sm uppercase hiver:border-b">
-                Projects
-              </li>
-            </Link>
-            <Link href="/">
-              <li className="ml-10 text-sm uppercase hiver:border-b">
-                Contact
-              </li>
-            </Link>
-          </ul>
-        </div>
-      </div>
-    </div>
+    <Box className="fixed w-full shadow-xl z-[100]" sx={{ height: 65 }}>
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: "row",
+          justifyContent: "center",
+          alignItems: "center",
+          mt: -1.5,
+        }}
+      >
+        <ul className="hidden md:flex">
+          <Link href="/" style={{ textDecoration: "none" }}>
+            <li className="m-1 ml-3 mr-3 text-md uppercase hiver:border-b text-gray-700 tracking-widest">
+              Home
+            </li>
+          </Link>
+          <Link href="/about" style={{ textDecoration: "none" }}>
+            <li className="m-1 ml-3 mr-3 text-md uppercase hiver:border-b  text-gray-700 tracking-widest">
+              About
+            </li>
+          </Link>
+        </ul>
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: "row",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <Image
+            src="/../public/assets/logoNav.png"
+            alt="/"
+            width="90"
+            height="90"
+          />
+        </Box>
+        <ul className="hidden md:flex">
+          <Link href="/projects" style={{ textDecoration: "none" }}>
+            <li className="m-1 ml-3 mr-3 text-md uppercase hiver:border-b  text-gray-700 tracking-widest">
+              Projects
+            </li>
+          </Link>
+          <Link href="/connect" style={{ textDecoration: "none" }}>
+            <li className="m-1 ml-3 mr-3 text-md uppercase hiver:border-b  text-gray-700 tracking-widest">
+              Connect
+            </li>
+          </Link>
+        </ul>
+      </Box>
+    </Box>
   );
 };
 

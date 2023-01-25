@@ -86,11 +86,20 @@ export default function About() {
             <Link href="/projects" style={{ textDecoration: "none" }}>
               <Button
                 className="bg-[#798777]  text-gray-900 m-5"
-                sx={{ mt: 1 }}
+                sx={{ mt: 1, width: "200px" }}
               >
                 Go to projects
               </Button>
             </Link>
+            <Button
+              className="bg-[#798777]  text-gray-900 m-5"
+              sx={{ mt: 1, width: "200px" }}
+              onClick={() => {
+                window.scrollTo({ top: 800, behavior: "smooth" });
+              }}
+            >
+              See more about me
+            </Button>
           </Box>
         </Box>
 

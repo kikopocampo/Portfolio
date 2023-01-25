@@ -70,12 +70,37 @@ const CodingJourney = () => {
           justifyContent: "center",
         }}
       >
-        <Typography variant="h4" className="m-5">
+        <Typography variant="h4" className="py-2  text-gray-700">
           My Coding Journey
         </Typography>
-        <Stepper activeStep={activeStep} orientation="vertical">
+        <Stepper
+          activeStep={activeStep}
+          orientation="vertical"
+          sx={{ textAlign: "justify" }}
+        >
           {steps.map((step, index) => (
-            <Step key={step.label}>
+            <Step
+              key={step.label}
+              sx={{
+                "& .MuiStepLabel-root .Mui-completed": {
+                  color: "#798777", // circle color (COMPLETED)
+                },
+                "& .MuiStepLabel-label.Mui-completed.MuiStepLabel-alternativeLabel":
+                  {
+                    color: "grey.500", // Just text label (COMPLETED)
+                  },
+                "& .MuiStepLabel-root .Mui-active": {
+                  color: "#798777", // circle color (ACTIVE)
+                },
+                "& .MuiStepLabel-label.Mui-active.MuiStepLabel-alternativeLabel":
+                  {
+                    color: "common.white", // Just text label (ACTIVE)
+                  },
+                "& .MuiStepLabel-root .Mui-active .MuiStepIcon-text": {
+                  fill: "black", // circle's number (ACTIVE)
+                },
+              }}
+            >
               <StepLabel>
                 <Typography className="text-lg">{step.label}</Typography>
               </StepLabel>
@@ -87,7 +112,7 @@ const CodingJourney = () => {
                       <Button
                         onClick={handleNext}
                         className="bg-[#798777]  text-gray-900 m-5"
-                        sx={{ mt: 1 }}
+                        sx={{ mt: 1, width: "140px" }}
                       >
                         Continue
                       </Button>
@@ -96,7 +121,7 @@ const CodingJourney = () => {
                       <Button
                         onClick={handleBack}
                         className="bg-[#798777]  text-gray-900 m-5"
-                        sx={{ mt: 1 }}
+                        sx={{ mt: 1, width: "140px" }}
                       >
                         Back
                       </Button>

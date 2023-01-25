@@ -2,6 +2,7 @@ import "../styles/globals.css";
 import { Rubik, Nunito } from "@next/font/google";
 import { useRouter } from "next/router";
 import { motion, AnimatePresence } from "framer-motion";
+import NavBar from "../components/Navbar";
 
 const rubik = Rubik({ subsets: ["latin"] });
 const nunito = Nunito({ subsets: ["latin"] });
@@ -30,6 +31,7 @@ export default function App({ Component, pageProps }) {
           },
         }}
       >
+        <NavBar />
         <Component {...pageProps} />
       </motion.div>
     </AnimatePresence>

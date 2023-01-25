@@ -4,6 +4,7 @@ import { Carousel } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Image from "next/image";
 import { Box } from "@mui/system";
+import { autocompleteClasses } from "@mui/material";
 
 const projects = [
   {
@@ -42,18 +43,26 @@ export default function BootstrapCarousel() {
     setIndex(selectedIndex);
   };
   return (
-    <Box>
-      <Carousel onSelect={handleSelect}>
+    <Box
+      sx={{
+        width: "60%",
+        height: "90vh",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+      }}
+    >
+      {/* <Carousel onSelect={handleSelect}>
         {projects.map((item) => (
-          <Carousel.Item key={item.id} interval={4000}>
-            <Image src={item.imageUrl} alt="slides" height={800} width={1000} />
+          <Carousel.Item key={item.id}>
+            <Image src={item.imageUrl} alt="slides" height={800} width={800} />
             <Carousel.Caption>
               <h3>{item.title}</h3>
               <p>{item.body}</p>
             </Carousel.Caption>
           </Carousel.Item>
         ))}
-      </Carousel>
+      </Carousel> */}
     </Box>
   );
 }
