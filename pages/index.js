@@ -4,58 +4,13 @@ import Head from "next/head";
 import Image from "next/image";
 import NavBar from "../components/Navbar";
 import { Rubik, Nunito } from "@next/font/google";
-
-import Stepper from "@mui/material/Stepper";
-import Step from "@mui/material/Step";
-import StepLabel from "@mui/material/StepLabel";
-import StepContent from "@mui/material/StepContent";
 import Button from "@mui/material/Button";
-import Paper from "@mui/material/Paper";
+import Link from "next/link";
 
 const rubik = Rubik({ subsets: ["latin"] });
 const nunito = Nunito({ subsets: ["latin"] });
 
 export default function Home() {
-  const [activeStep, setActiveStep] = useState(0);
-
-  const handleNext = () => {
-    setActiveStep((prevActiveStep) => prevActiveStep + 1);
-  };
-
-  const handleBack = () => {
-    setActiveStep((prevActiveStep) => prevActiveStep - 1);
-  };
-
-  const handleReset = () => {
-    setActiveStep(0);
-  };
-
-  const steps = [
-    {
-      label: "Salut!",
-      description: `APPLE`,
-    },
-    {
-      label: "Ranker",
-      description: `APPLE`,
-    },
-    {
-      label: "Scheduler",
-      description: `APPLE`,
-    },
-    {
-      label: "Jungle",
-      description: `APPLE`,
-    },
-    {
-      label: "Pig game",
-      description: `APPLE`,
-    },
-    {
-      label: "Tiny App",
-      description: `APPLE`,
-    },
-  ];
   return (
     <>
       <Head>
@@ -79,114 +34,38 @@ export default function Home() {
           objectFit="cover"
         />
       </div>
+
       <Box
         className={nunito.className}
         sx={{
           height: "100vh",
           display: "flex",
-          justifyContent: "space-around",
-          alignItems: "center",
-        }}
-      >
-        <Box
-          sx={{
-            width: "50vw",
-            pr: 2,
-            pl: 25,
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "flex-start",
-            alignItems: "center",
-          }}
-        >
-          <Box sx={{ color: "#798777" }}>
-            <Typography sx={{ fontSize: 45 }}>
-              "It is never too late to be what you might have been."
-            </Typography>
-            <Typography
-              sx={{
-                fontSize: 25,
-                display: "flex",
-                justifyContent: "flex-end",
-                mr: 10,
-                mb: 5,
-              }}
-            >
-              —George Eliot
-            </Typography>
-          </Box>
-          <Box>
-            <Typography sx={{ fontSize: 20 }}>
-              My name is Francisco Ocampo, a full stack web developer. Call me
-              Kiko. I used to cook at professional kitchens, now I code and make
-              websites.
-            </Typography>
-          </Box>
-        </Box>
-        <Box
-          sx={{
-            mt: "7%",
-            width: "50vw",
-            display: "flex",
-            flexDirection: "column",
-            ml: 5,
-          }}
-        >
-          <Image
-            src="/../public/assets/dp.png"
-            alt="me"
-            width={400}
-            height={400}
-          />
-          <Box sx={{ mt: -10 }}>
-            <Image
-              src="/../public/assets/logo.png"
-              alt="logo"
-              width={350}
-              height={350}
-            />
-          </Box>
-        </Box>
-      </Box>
-      <Box
-        sx={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
           justifyContent: "center",
-        }}
-      >
-        <Typography>Projects</Typography>
-      </Box>
-      <Box
-        sx={{
-          minWidth: 400,
-          display: "flex",
-          flexDirection: "column",
           alignItems: "center",
-          justifyContent: "center",
+          flexDirection: "column",
         }}
       >
-        <Stepper activeStep={activeStep} orientation="vertical">
-          {steps.map((step, index) => (
-            <Step key={step.label}>
-              <StepLabel>{step.label}</StepLabel>
-              <StepContent>
-                <Typography>{step.description}</Typography>
-                <Box sx={{ mb: 2 }}>
-                  <div>
-                    <Button onClick={handleNext} sx={{ mt: 1, mr: 1 }}>
-                      Continue
-                    </Button>
-                    <Button onClick={handleBack} sx={{ mt: 1, mr: 1 }}>
-                      Back
-                    </Button>
-                  </div>
-                </Box>
-              </StepContent>
-            </Step>
-          ))}
-        </Stepper>
+        <Typography className="uppercase text-sm tracking-widest text-gray-500">
+          LET&quotS CREATE SOMETHING EXCITING TOGETHER
+        </Typography>
+        <Typography variant="h1" className="py-2  text-gray-700">
+          Hey there! I&quotm <span className="text-[#798777]">Kiko</span>
+        </Typography>
+        <Typography variant="h4" className="py-2  text-gray-700">
+          Junior Full Stack Web Developer
+        </Typography>
+        <Box className="w-1/2 text-center">
+          <Typography className="py-2  text-gray-700">
+            My name is Francisco Ocampo, a full stack web developer. Call me
+            Kiko. I used to cook at professional kitchens, now I code and make
+            websites.
+          </Typography>
+          <Link href="/about">
+            <Button className="bg-[#798777]  text-gray-900 m-5">
+              Let&quots get started
+            </Button>
+          </Link>
+        </Box>
       </Box>
     </>
   );
