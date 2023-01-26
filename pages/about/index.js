@@ -55,7 +55,7 @@ export default function About() {
         >
           <Box sx={{ color: "#798777" }}>
             <Typography sx={{ fontSize: 45 }}>
-              &quotIt is never too late to be what you might have been.&quot
+              &quot;It is never too late to be what you might have been.&quot;
             </Typography>
             <Typography
               sx={{
@@ -95,7 +95,7 @@ export default function About() {
               className="bg-[#798777]  text-gray-900 m-5"
               sx={{ mt: 1, width: "200px" }}
               onClick={() => {
-                window.scrollTo({ top: 800, behavior: "smooth" });
+                window.scrollTo({ top: 1000, behavior: "smooth" });
               }}
             >
               See more about me
@@ -109,7 +109,7 @@ export default function About() {
             width: "50vw",
             display: "flex",
             flexDirection: "column",
-            ml: 5,
+            ml: 8,
           }}
         >
           <Image

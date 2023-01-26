@@ -9,37 +9,44 @@ const projects = [
   {
     id: 1,
     title: "Salut!",
-    body: "Bootstrap Carousel Example",
-    imageUrl: "/../public/assets/bg2.jpg",
-    docs: "https://getbootstrap.com/docs/4.0/components/carousel/",
+    body: "Salut is an interactive cocktail cabinet and your source for cocktail recipes. Make a catalog or your favorite cocktail recipes. Know what to drink tonight!",
+    imageUrl: "/../public/assets/salut.gif",
+    imageUrl2: "/../public/assets/salut-sc.png",
+    link: "https://salut-production.up.railway.app/",
+    docs: "https://github.com/kikopocampo/salut",
   },
   {
     id: 2,
     title: "Ranker",
-    body: "Bootstrap Carousel Example",
-    imageUrl: "/../public/assets/bg.jpg",
-    docs: "https://getbootstrap.com/docs/4.0/components/carousel/",
+    body: "Ranker is a web application that lets user create polls to be shared with their family, friends, or co-workers. Don't know what movie to watch tonight? Make a poll and send to your friends! Built using Node and Express",
+    imageUrl: "/../public/assets/ranker.gif",
+    imageUrl2: "/../public/assets/ranker-sc.png",
+    link: "http://lighthouse-midterm-ranker.herokuapp.com/",
+    docs: "https://github.com/kikopocampo/decision-maker",
   },
   {
     id: 3,
     title: "Scheduler",
-    body: "Bootstrap Carousel Example",
-    imageUrl: "/../public/assets/bg2.jpg",
-    docs: "https://getbootstrap.com/docs/4.0/components/carousel/",
+    body: "Interview Scheduler is a React appllication that lets the host organize and manage interviews in a more efficient manner. It lets users (interviewees) create, edit, and delete their schedule for interviews.",
+    imageUrl: "/../public/assets/scheduler.gif",
+    imageUrl2: "/../public/assets/scheduler-sc.jpeg",
+    docs: "https://github.com/kikopocampo/scheduler",
   },
   {
     id: 4,
     title: "Jungle",
-    body: "Bootstrap Carousel Example",
-    imageUrl: "/../public/assets/bg.jpg",
-    docs: "https://getbootstrap.com/docs/4.0/components/carousel/",
+    body: "A mini e-commerce application built with Rails 6.1. Jungle, where you can find any plants. Select from our vast selection of plants to take home.",
+    imageUrl: "/../public/assets/jungle.gif",
+    imageUrl2: "/../public/assets/jungle-sc.png",
+    docs: "https://github.com/kikopocampo/Jungle",
   },
   {
     id: 5,
     title: "Tiny App",
-    body: "Bootstrap Carousel Example",
-    imageUrl: "/../public/assets/bg.jpg",
-    docs: "https://getbootstrap.com/docs/4.0/components/carousel/",
+    body: "TinyApp is a full stack web application built with Node and Express that allows users to shorten long URLs (à la bit.ly). Also includes analytics that shows how many times the link has been visited",
+    imageUrl: "/../public/assets/tinyapp.gif",
+    imageUrl2: "/../public/assets/tinyapp-sc.jpeg",
+    docs: "https://github.com/kikopocampo/tinyapp",
   },
 ];
 
@@ -77,18 +84,9 @@ const Projects = () => {
           alignItems: "center",
         }}
       >
-        <Box
-          sx={{
-            color: "#798777",
-
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        >
-          <Typography sx={{ fontSize: 45 }}>Projects</Typography>
-        </Box>
+        <Typography className="uppercase text-lg tracking-widest text-gray-500">
+          Hover to take a peek
+        </Typography>
         <Box
           sx={{
             textAlign: "center",
@@ -104,8 +102,11 @@ const Projects = () => {
               <ProjectCard
                 key={item.id}
                 imageUrl={item.imageUrl}
+                imageUrl2={item.imageUrl2}
                 title={item.title}
                 body={item.body}
+                docs={item.docs}
+                link={item.link ? item.link : ""}
               />
             );
           })}

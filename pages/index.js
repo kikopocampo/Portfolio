@@ -46,23 +46,21 @@ export default function Home() {
         }}
       >
         <Typography className="uppercase text-sm tracking-widest text-gray-500">
-          LET&quotS CREATE SOMETHING EXCITING TOGETHER
+          LET&apos;S CREATE SOMETHING EXCITING TOGETHER
         </Typography>
         <Typography variant="h1" className="py-2  text-gray-700">
-          Hey there! I&quotm <span className="text-[#798777]">Kiko</span>
+          Hey there! I&apos;m <span className="text-[#798777]">Kiko</span>
         </Typography>
         <Typography variant="h4" className="py-2  text-gray-700">
           Junior Full Stack Web Developer
         </Typography>
         <Box className="w-1/2 text-center">
-          <Typography className="py-2  text-gray-700">
-            My name is Francisco Ocampo, a full stack web developer. Call me
-            Kiko. I used to cook at professional kitchens, now I code and make
-            websites.
+          <Typography className="uppercase text-sm tracking-widest text-gray-500">
+            Welcome to my personal website
           </Typography>
           <Link href="/about">
             <Button className="bg-[#798777]  text-gray-900 m-5">
-              Let&quots get started
+              Let&apos;s get started
             </Button>
           </Link>
         </Box>

@@ -5,6 +5,7 @@ import Step from "@mui/material/Step";
 import StepLabel from "@mui/material/StepLabel";
 import StepContent from "@mui/material/StepContent";
 import Button from "@mui/material/Button";
+import Link from "next/link";
 
 const CodingJourney = () => {
   const [activeStep, setActiveStep] = useState(0);
@@ -112,7 +113,7 @@ const CodingJourney = () => {
                       <Button
                         onClick={handleNext}
                         className="bg-[#798777]  text-gray-900 m-5"
-                        sx={{ mt: 1, width: "140px" }}
+                        sx={{ mt: 1, width: "100px" }}
                       >
                         Continue
                       </Button>
@@ -121,9 +122,17 @@ const CodingJourney = () => {
                       <Button
                         onClick={handleBack}
                         className="bg-[#798777]  text-gray-900 m-5"
-                        sx={{ mt: 1, width: "140px" }}
+                        sx={{ mt: 1, width: "100px" }}
                       >
                         Back
+                      </Button>
+                    )}
+                    {index === steps.length - 1 && (
+                      <Button
+                        className="bg-[#798777]  text-gray-900 m-5"
+                        sx={{ mt: 1, width: "100px" }}
+                      >
+                        <Link href="/projects">Projects</Link>
                       </Button>
                     )}
                   </div>
