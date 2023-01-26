@@ -29,6 +29,6 @@
   }
 
   button {
-    @apply shadow-xl rounded-xl uppercase;
+    @apply shadow-xl rounded-xl uppercase bg-[#798777]  text-gray-900 m-5;
   }
 }
