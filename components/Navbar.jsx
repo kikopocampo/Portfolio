@@ -36,7 +36,7 @@ const NavBar = () => {
           }}
         >
           <Image
-            src="/../public/assets/logoNav.png"
+            src="/static/images/logoNav.png"
             alt="/"
             width="90"
             height="90"

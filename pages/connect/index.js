@@ -33,7 +33,7 @@ export default function Home() {
         }}
       >
         <Image
-          src="/../public/assets/bg2.jpg"
+          src="/static/images/bg2.jpg"
           alt="background"
           layout="fill"
           objectFit="cover"

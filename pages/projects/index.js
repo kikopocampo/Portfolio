@@ -2,7 +2,6 @@ import { useState } from "react";
 import { Box, Typography, Button } from "@mui/material";
 import Head from "next/head";
 import Image from "next/image";
-import Link from "next/link";
 import ProjectCard from "../../components/ProjectCard";
 
 const projects = [
@@ -10,8 +9,8 @@ const projects = [
     id: 1,
     title: "Salut!",
     body: "Salut is an interactive cocktail cabinet and your source for cocktail recipes. Make a catalog or your favorite cocktail recipes. Know what to drink tonight!",
-    imageUrl: "/../public/assets/salut.gif",
-    imageUrl2: "/../public/assets/salut-sc.png",
+    imageUrl: "/static/images/salut.gif",
+    imageUrl2: "/static/images/salut-sc.png",
     link: "https://salut-production.up.railway.app/",
     docs: "https://github.com/kikopocampo/salut",
   },
@@ -19,8 +18,8 @@ const projects = [
     id: 2,
     title: "Ranker",
     body: "Ranker is a web application that lets user create polls to be shared with their family, friends, or co-workers. Don't know what movie to watch tonight? Make a poll and send to your friends! Built using Node and Express",
-    imageUrl: "/../public/assets/ranker.gif",
-    imageUrl2: "/../public/assets/ranker-sc.png",
+    imageUrl: "/static/images/ranker.gif",
+    imageUrl2: "/static/images/ranker-sc.png",
     link: "http://lighthouse-midterm-ranker.herokuapp.com/",
     docs: "https://github.com/kikopocampo/decision-maker",
   },
@@ -28,24 +27,24 @@ const projects = [
     id: 3,
     title: "Scheduler",
     body: "Interview Scheduler is a React appllication that lets the host organize and manage interviews in a more efficient manner. It lets users (interviewees) create, edit, and delete their schedule for interviews.",
-    imageUrl: "/../public/assets/scheduler.gif",
-    imageUrl2: "/../public/assets/scheduler-sc.jpeg",
+    imageUrl: "/static/images/scheduler.gif",
+    imageUrl2: "/static/images/scheduler-sc.jpeg",
     docs: "https://github.com/kikopocampo/scheduler",
   },
   {
     id: 4,
     title: "Jungle",
     body: "A mini e-commerce application built with Rails 6.1. Jungle, where you can find any plants. Select from our vast selection of plants to take home.",
-    imageUrl: "/../public/assets/jungle.gif",
-    imageUrl2: "/../public/assets/jungle-sc.png",
+    imageUrl: "/static/images/jungle.gif",
+    imageUrl2: "/static/images/jungle-sc.png",
     docs: "https://github.com/kikopocampo/Jungle",
   },
   {
     id: 5,
     title: "Tiny App",
     body: "TinyApp is a full stack web application built with Node and Express that allows users to shorten long URLs (à la bit.ly). Also includes analytics that shows how many times the link has been visited",
-    imageUrl: "/../public/assets/tinyapp.gif",
-    imageUrl2: "/../public/assets/tinyapp-sc.jpeg",
+    imageUrl: "/static/images/tinyapp.gif",
+    imageUrl2: "/static/images/tinyapp-sc.jpeg",
     docs: "https://github.com/kikopocampo/tinyapp",
   },
 ];
@@ -68,7 +67,7 @@ const Projects = () => {
         }}
       >
         <Image
-          src="/../public/assets/bg2.jpg"
+          src="/static/images/bg2.jpg"
           alt="background"
           layout="fill"
           objectFit="cover"

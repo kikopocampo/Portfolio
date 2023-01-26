@@ -27,7 +27,7 @@ export default function About() {
         }}
       >
         <Image
-          src="/../public/assets/bg2.jpg"
+          src="/static/images/bg2.jpg"
           alt="background"
           layout="fill"
           objectFit="cover"
@@ -113,14 +113,14 @@ export default function About() {
           }}
         >
           <Image
-            src="/../public/assets/dp.png"
+            src="/static/images/dp.png"
             alt="me"
             width={400}
             height={400}
           />
           <Box sx={{ mt: -10 }}>
             <Image
-              src="/../public/assets/logo.png"
+              src="/static/images/logo.png"
               alt="logo"
               width={350}
               height={350}
