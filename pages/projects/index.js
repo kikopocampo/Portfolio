@@ -3,6 +3,7 @@ import { Box, Typography, Button } from "@mui/material";
 import Head from "next/head";
 import Image from "next/image";
 import ProjectCard from "../../components/ProjectCard";
+import Layout from "../../components/Layout";
 
 const projects = [
   {
@@ -73,44 +74,46 @@ const Projects = () => {
           objectFit="cover"
         />
       </div>
-      <Box
-        sx={{
-          width: "100vw",
-          p: 10,
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
-        <Typography className="uppercase text-lg tracking-widest text-gray-500">
-          Hover to take a peek
-        </Typography>
+      <Layout>
         <Box
           sx={{
-            textAlign: "center",
-            m: 4,
+            width: "100vw",
+            p: 10,
             display: "flex",
             flexDirection: "column",
             justifyContent: "center",
             alignItems: "center",
           }}
         >
-          {projects.map((item) => {
-            return (
-              <ProjectCard
-                key={item.id}
-                imageUrl={item.imageUrl}
-                imageUrl2={item.imageUrl2}
-                title={item.title}
-                body={item.body}
-                docs={item.docs}
-                link={item.link ? item.link : ""}
-              />
-            );
-          })}
+          <Typography className="uppercase text-lg tracking-widest text-gray-500">
+            Hover to take a peek
+          </Typography>
+          <Box
+            sx={{
+              textAlign: "center",
+              m: 4,
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            {projects.map((item) => {
+              return (
+                <ProjectCard
+                  key={item.id}
+                  imageUrl={item.imageUrl}
+                  imageUrl2={item.imageUrl2}
+                  title={item.title}
+                  body={item.body}
+                  docs={item.docs}
+                  link={item.link ? item.link : ""}
+                />
+              );
+            })}
+          </Box>
         </Box>
-      </Box>
+      </Layout>
     </>
   );
 };

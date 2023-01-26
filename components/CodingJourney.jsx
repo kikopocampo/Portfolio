@@ -112,8 +112,13 @@ const CodingJourney = () => {
                     {index !== steps.length - 1 && (
                       <Button
                         onClick={handleNext}
-                        className="bg-[#798777]  text-gray-900 m-5"
-                        sx={{ mt: 1, width: "100px" }}
+                        sx={{
+                          mt: 1,
+                          m: 2,
+                          width: "100px",
+                          color: "gray",
+                          border: "solid",
+                        }}
                       >
                         Continue
                       </Button>
@@ -121,16 +126,26 @@ const CodingJourney = () => {
                     {index !== 0 && (
                       <Button
                         onClick={handleBack}
-                        className="bg-[#798777]  text-gray-900 m-5"
-                        sx={{ mt: 1, width: "100px" }}
+                        sx={{
+                          mt: 1,
+                          m: 2,
+                          width: "100px",
+                          color: "gray",
+                          border: "solid",
+                        }}
                       >
                         Back
                       </Button>
                     )}
                     {index === steps.length - 1 && (
                       <Button
-                        className="bg-[#798777]  text-gray-900 m-5"
-                        sx={{ mt: 1, width: "100px" }}
+                        sx={{
+                          mt: 1,
+                          m: 2,
+                          width: "100px",
+                          color: "gray",
+                          border: "solid",
+                        }}
                       >
                         <Link href="/projects">Projects</Link>
                       </Button>

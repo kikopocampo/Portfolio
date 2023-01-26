@@ -16,7 +16,6 @@ const ProjectCard = (props) => {
           sx={{
             textAlign: "center",
             display: "flex",
-            // width: "50vw",
             alignItems: "center",
           }}
           onMouseEnter={onMouseEnter}
@@ -52,35 +51,46 @@ const ProjectCard = (props) => {
           <Typography className="uppercase text-md text-gray-700" sx={{ m: 2 }}>
             {props.body}
           </Typography>
-
-          {props.link && (
+          <Box>
+            {props.link && (
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href={props.link}
+                style={{ textDecoration: "none" }}
+              >
+                <Button
+                  sx={{
+                    mt: 1,
+                    m: 2,
+                    width: "200px",
+                    color: "gray",
+                    border: "solid",
+                  }}
+                >
+                  Try it out!
+                </Button>
+              </a>
+            )}
             <a
               target="_blank"
               rel="noopener noreferrer"
-              href={props.link}
+              href={props.docs}
               style={{ textDecoration: "none" }}
             >
               <Button
-                className="bg-[#798777]  text-gray-900 m-5"
-                sx={{ width: "200px" }}
+                sx={{
+                  mt: 1,
+                  m: 2,
+                  width: "200px",
+                  color: "gray",
+                  border: "solid",
+                }}
               >
-                Try it out!
+                Go to github repo
               </Button>
             </a>
-          )}
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href={props.docs}
-            style={{ textDecoration: "none" }}
-          >
-            <Button
-              className="bg-[#798777]  text-gray-900 m-5"
-              sx={{ width: "200px" }}
-            >
-              Go to github repo
-            </Button>
-          </a>
+          </Box>
         </Box>
       </Box>
     </>
