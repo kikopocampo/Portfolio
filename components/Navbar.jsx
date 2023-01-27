@@ -1,11 +1,27 @@
+import { useState, useEffect } from "react";
 import { Box } from "@mui/material";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
 const NavBar = () => {
+  const [clientWindowHeight, setClientWindowHeight] = useState("");
+
+  const handleScroll = () => {
+    setClientWindowHeight(window.scrollY);
+  };
+  const opaque = clientWindowHeight > 60 ? "rgba(242, 225, 208,.7)" : "";
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  });
+
   return (
-    <Box className="fixed w-full shadow-xl z-[100]" sx={{ height: 65 }}>
+    <Box
+      className="fixed w-full shadow-xl z-[100]"
+      sx={{ height: 65, backgroundColor: opaque }}
+    >
       <Box
         sx={{
           display: "flex",

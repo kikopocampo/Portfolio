@@ -22,14 +22,9 @@ const ProjectCard = (props) => {
           onMouseLeave={onMouseLeave}
         >
           {isHover ? (
-            <Image src={props.imageUrl} alt="slides" height={550} width={550} />
+            <Image src={props.imageUrl} alt="slides" height={500} width={550} />
           ) : (
-            <Image
-              src={props.imageUrl2}
-              alt="slides"
-              height={550}
-              width={550}
-            />
+            <Image src={props.imageUrl} alt="slides" height={500} width={550} />
           )}
         </Box>
         <Box
